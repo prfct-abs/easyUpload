@@ -59,8 +59,10 @@ import { useRouter } from 'vue-router'
 const mobileMenuOpen = ref(false)
 const router = useRouter()
 
-const logout = () => {
-  // TODO: Supabase logout
+const supabase = useSupabaseClient()
+
+const logout = async () => {
+  await supabase.auth.signOut()
   router.push('/login')
 }
 </script>
