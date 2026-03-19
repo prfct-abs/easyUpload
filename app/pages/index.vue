@@ -30,13 +30,13 @@
         <div class="w-3 h-3 rounded-full bg-green-400"></div>
       </div>
       <div class="p-8 pb-0">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="aspect-square bg-gray-200 rounded-lg shadow-inner"></div>
-          <div class="aspect-square bg-gray-300 rounded-lg shadow-inner"></div>
-          <div class="aspect-square bg-gray-200 rounded-lg shadow-inner"></div>
-          <div class="aspect-square bg-gray-300 rounded-lg shadow-inner"></div>
-          <div class="aspect-square bg-gray-200 rounded-lg shadow-inner"></div>
-          <div class="aspect-square bg-gray-300 rounded-lg shadow-inner"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm" alt="Gallery sample" />
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm" alt="Gallery sample" />
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm hidden md:block" alt="Gallery sample" />
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm" alt="Gallery sample" />
+          <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm" alt="Gallery sample" />
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" class="aspect-square w-full object-cover rounded-lg shadow-sm hidden md:block" alt="Gallery sample" />
         </div>
         <div class="h-10 bg-gradient-to-t from-white to-transparent -mt-10 relative z-10"></div>
       </div>
