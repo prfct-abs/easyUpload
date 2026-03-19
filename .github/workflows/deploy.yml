@@ -35,6 +35,9 @@ jobs:
         
       - name: Build Static SPA with Nuxt
         run: npx nuxt generate
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         
       - name: Create fallback 404 (SPA Router Hack)
         run: cp .output/public/index.html .output/public/404.html
