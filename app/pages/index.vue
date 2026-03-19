@@ -7,9 +7,19 @@
       Upload large photos directly from your phone. Share stunning, lightning-fast galleries with your clients.
     </p>
     <div class="flex items-center justify-center space-x-4">
-      <NuxtLink to="/login" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition transform hover:-translate-y-0.5">
-        Photographer Login
-      </NuxtLink>
+      <template v-if="user">
+        <NuxtLink to="/dashboard" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition transform hover:-translate-y-0.5">
+          Go to Dashboard &rarr;
+        </NuxtLink>
+      </template>
+      <template v-else>
+        <NuxtLink to="/signup" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition transform hover:-translate-y-0.5">
+          Start for Free
+        </NuxtLink>
+        <NuxtLink to="/login" class="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-semibold shadow-sm hover:bg-gray-50 hover:shadow transition transform hover:-translate-y-0.5">
+          Sign In
+        </NuxtLink>
+      </template>
     </div>
 
     <!-- Preview Graphic -->
@@ -33,3 +43,7 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const user = useSupabaseUser()
+</script>
