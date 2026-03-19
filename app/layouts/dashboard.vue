@@ -3,7 +3,7 @@
     
     <!-- Mobile Header -->
     <div class="md:hidden bg-white border-b border-gray-200 p-4 flex justify-between items-center sticky top-0 z-20">
-      <NuxtLink to="/dashboard" class="text-xl font-bold text-indigo-600">EasyUpload</NuxtLink>
+      <NuxtLink to="/" class="text-xl font-bold text-indigo-600 hover:opacity-80 transition">EasyUpload</NuxtLink>
       <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-gray-500 hover:text-gray-700">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
@@ -12,7 +12,7 @@
     <!-- Sidebar (Desktop & Mobile Slide-out) -->
     <aside :class="['w-64 bg-white border-r border-gray-200 flex-shrink-0 fixed md:sticky top-0 h-screen z-30 transition-transform transform', mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0']">
       <div class="p-6 hidden md:block">
-        <NuxtLink to="/dashboard" class="text-2xl font-bold text-indigo-600 tracking-tight inline-block hover:opacity-80 transition">EasyUpload</NuxtLink>
+        <NuxtLink to="/" class="text-2xl font-bold text-indigo-600 tracking-tight inline-block hover:opacity-80 transition">EasyUpload</NuxtLink>
       </div>
       
       <div class="md:hidden p-4 flex justify-end">
