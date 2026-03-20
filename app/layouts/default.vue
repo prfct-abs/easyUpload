@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 text-gray-900 font-sans">
+  <div class="min-h-screen flex flex-col bg-gray-50 text-gray-900 font-sans">
     <nav class="bg-white border-b border-gray-100 flex items-center justify-between px-6 py-4">
       <NuxtLink to="/" class="text-xl font-bold tracking-tight text-indigo-600 hover:opacity-80 transition block">EasyUpload</NuxtLink>
       <div class="space-x-4 text-sm font-medium flex items-center">
@@ -13,9 +13,29 @@
         </template>
       </div>
     </nav>
-    <main>
+    <main class="flex-grow">
       <slot />
     </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-white border-t border-gray-100 mt-auto">
+      <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+        <div>
+          <NuxtLink to="/" class="text-xl font-bold tracking-tight text-gray-900">EasyUpload</NuxtLink>
+          <p class="text-sm text-gray-500 mt-1.5 font-medium">Stunning client galleries, drastically simplified.</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 text-sm font-medium text-gray-500">
+          <NuxtLink v-if="!user" to="/login" class="hover:text-indigo-600 transition">Photographer Login</NuxtLink>
+          <NuxtLink v-if="!user" to="/signup" class="hover:text-indigo-600 transition">Create Account</NuxtLink>
+          <a href="#" class="hover:text-indigo-600 transition">Terms of Service</a>
+          <a href="#" class="hover:text-indigo-600 transition">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="bg-gray-50 border-t border-gray-100 py-6 text-center">
+        <p class="text-xs font-semibold tracking-wider text-gray-400 uppercase">&copy; {{ new Date().getFullYear() }} EasyUpload Platform. All Rights Reserved.</p>
+      </div>
+    </footer>
   </div>
 </template>
 
